@@ -4,7 +4,10 @@
   font-size: 10px;
 }
 
-.logo {
+body {
+  background-color: #FFFFFF;
+}
+body .logo {
   width: 16.2rem;
   display: block;
   margin: auto;
@@ -12,8 +15,25 @@
   margin-bottom: 5px;
 }
 @media (min-width: 768px) {
-  .logo {
+  body .logo {
     margin-top: 30px;
-    margin-bottom: 31.8px;
+    margin-bottom: 32px;
   }
+}
+body .location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  height: 5rem;
+  gap: 1.7rem;
+  margin: 0 -8px 0 -8px;
+}
+body .location .fa-solid {
+  font-size: 1.6rem;
+}
+body .location .location__city {
+  font-size: 1.6rem;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
