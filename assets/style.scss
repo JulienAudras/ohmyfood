@@ -8,14 +8,21 @@ $main-color:#9356dc;
 $secondary-color:#ff79da;
 $tertiary-color:#99e2d0;
 $main-background-color:#FFFFFF;
-$secondary-background-color:#D2D2D2;
+$secondary-background-color:#F7F7F7;
 $tertiary-background-color:#EAEAEA;
 $footer-color:#353535;
 
 @mixin section-title {
     font-size:2.4rem;
-    font-weight: 800;
+    font-weight: 900;
     line-height: 2.813rem;
+}
+
+@mixin section-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 @mixin button {
@@ -30,11 +37,19 @@ $footer-color:#353535;
     justify-content: center;
     align-items: center;
     font-size: 1.6rem;
-    font-weight: 500;
+    font-weight: 900;
+}
+
+@mixin card{
+    display: flex;
+    flex-direction: row;
+    border-radius: 2rem;
+    box-sizing: border-box;
 }
 
 body{
     background-color: $main-background-color;
+    margin:0;
 
     .logo{
             width: 16.2rem;
@@ -68,10 +83,7 @@ body{
     }
 
     .intro{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include section-display;
         background-color: $secondary-background-color;
         margin: 0 -8px 0 -8px;
             .intro__title{
@@ -93,7 +105,72 @@ body{
                 width: 21.85rem;
                 margin-bottom: 7rem;
             }
-    }
+        }
+    
+    .functioning{
+        @include section-display;
+        
+        .functioning__title{
+            @include section-title;
+            align-self: flex-start;
+            margin:50px 0 25px 20px;
+        }
+        .functioningCards{
+            width: 100%;
+        
+            .functioningCards__card{
+                @include card;
+                background-color: $secondary-background-color;
+                height:7.238rem;
+                align-items: center;
+                gap: 25px;
+                margin: 0 20px 25px 35.5px;
+                box-shadow: 0px 4px 10px rgba(0,0,0,0.15);    
+                .functioningCards__card--number{
+                    background-color:$main-color;
+                    width:2.4rem;
+                    height: 2.4rem;
+                    border-radius: 50px;
+                    font-size:1.6rem;
+                    font-weight: bold;
+                    color:$main-background-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: -10px;
+                }
+                .icon{
+                    font-size: 2rem;
+                }
+                .functioningCards__card--menuIcon{
+                    display: inline-block;
+                }
+                .functioningCards__card--menuIcon .icon{
+                    display: inline-block;
+                }
 
-    }
+                .purple{
+                    color: $main-color;
+                }
+                .functioningCards__card--text{
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                }
+                @media (min-width: 768px){
+                    width: 30%;
+                    margin:0;
+                    gap:24px;
+                }
+            }
+        @media (min-width: 768px){
+            display: flex;
+            flex-direction: row;
+            gap:36.51px
+        }  
 
+        }
+        @media (min-width: 768px){
+            margin:0 10%
+        }
+    }
+}

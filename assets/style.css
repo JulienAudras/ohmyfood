@@ -6,6 +6,7 @@
 
 body {
   background-color: #FFFFFF;
+  margin: 0;
 }
 body .logo {
   width: 16.2rem;
@@ -42,12 +43,12 @@ body .intro {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #D2D2D2;
+  background-color: #F7F7F7;
   margin: 0 -8px 0 -8px;
 }
 body .intro .intro__title {
   font-size: 2.4rem;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 2.813rem;
   text-align: center;
   margin-top: 39.5px;
@@ -73,7 +74,83 @@ body .intro .intro__button {
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 900;
   width: 21.85rem;
   margin-bottom: 7rem;
+}
+body .functioning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .functioning .functioning__title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 2.813rem;
+  align-self: flex-start;
+  margin: 50px 0 25px 20px;
+}
+body .functioning .functioningCards {
+  width: 100%;
+}
+body .functioning .functioningCards .functioningCards__card {
+  display: flex;
+  flex-direction: row;
+  border-radius: 2rem;
+  box-sizing: border-box;
+  background-color: #F7F7F7;
+  height: 7.238rem;
+  align-items: center;
+  gap: 25px;
+  margin: 0 20px 25px 35.5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+body .functioning .functioningCards .functioningCards__card .functioningCards__card--number {
+  background-color: #9356dc;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10px;
+}
+body .functioning .functioningCards .functioningCards__card .icon {
+  font-size: 2rem;
+}
+body .functioning .functioningCards .functioningCards__card .functioningCards__card--menuIcon {
+  display: inline-block;
+}
+body .functioning .functioningCards .functioningCards__card .functioningCards__card--menuIcon .icon {
+  display: inline-block;
+}
+body .functioning .functioningCards .functioningCards__card .purple {
+  color: #9356dc;
+}
+body .functioning .functioningCards .functioningCards__card .functioningCards__card--text {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  body .functioning .functioningCards .functioningCards__card {
+    width: 30%;
+    margin: 0;
+    gap: 24px;
+  }
+}
+@media (min-width: 768px) {
+  body .functioning .functioningCards {
+    display: flex;
+    flex-direction: row;
+    gap: 36.51px;
+  }
+}
+@media (min-width: 768px) {
+  body .functioning {
+    margin: 0 10%;
+  }
 }/*# sourceMappingURL=style.css.map */
