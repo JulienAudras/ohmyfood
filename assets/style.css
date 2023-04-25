@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
 :root {
   font-family: Roboto;
   font-size: 10px;
@@ -48,8 +53,7 @@ body .intro {
 }
 body .intro .intro__title {
   font-size: 2.4rem;
-  font-weight: 900;
-  line-height: 2.813rem;
+  font-weight: 700;
   text-align: center;
   margin-top: 39.5px;
   margin-bottom: 0;
@@ -74,7 +78,7 @@ body .intro .intro__button {
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
-  font-weight: 900;
+  font-weight: 500;
   width: 21.85rem;
   margin-bottom: 7rem;
 }
@@ -86,13 +90,18 @@ body .functioning {
 }
 body .functioning .functioning__title {
   font-size: 2.4rem;
-  font-weight: 900;
-  line-height: 2.813rem;
+  font-weight: 700;
   align-self: flex-start;
-  margin: 50px 0 25px 20px;
+  margin: 50px 0 25px 28px;
+}
+@media (min-width: 768px) {
+  body .functioning .functioning__title {
+    margin-left: -1%;
+  }
 }
 body .functioning .functioningCards {
   width: 100%;
+  margin-bottom: 50px;
 }
 body .functioning .functioningCards .functioningCards__card {
   display: flex;
@@ -109,10 +118,11 @@ body .functioning .functioningCards .functioningCards__card {
 body .functioning .functioningCards .functioningCards__card .functioningCards__card--number {
   background-color: #9356dc;
   width: 2.4rem;
+  min-width: 2.4rem;
   height: 2.4rem;
   border-radius: 50px;
   font-size: 1.6rem;
-  font-weight: bold;
+  font-weight: 500;
   color: #FFFFFF;
   display: flex;
   justify-content: center;
@@ -146,11 +156,174 @@ body .functioning .functioningCards .functioningCards__card .functioningCards__c
   body .functioning .functioningCards {
     display: flex;
     flex-direction: row;
-    gap: 36.51px;
+    gap: 3.5%;
   }
 }
 @media (min-width: 768px) {
   body .functioning {
-    margin: 0 10%;
+    margin: 0 12%;
+  }
+}
+body .restaurants {
+  background-color: #F7F7F7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: -8px;
+}
+body .restaurants .restaurants__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  align-self: flex-start;
+  margin: 50px 0px 25px 20px;
+}
+@media (min-width: 768px) {
+  body .restaurants .restaurants__title {
+    margin-left: 12.25%;
+    margin-bottom: 50px;
+  }
+}
+body .restaurants .restaurantsCards {
+  width: 100%;
+}
+body .restaurants .restaurantsCards .restaurantsCards__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 251px;
+  width: 92%;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  margin: 0 15px 15px 15px;
+}
+body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__cardPhoto {
+  height: 69.32%;
+  width: 100%;
+  position: relative;
+}
+body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__cardPhoto .new {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #008766;
+  padding: 7px 9px;
+  background-color: #99e2d0;
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+}
+body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__cardPhoto .restaurantsCards__cardPhoto--palette {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  z-index: 1;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+@media (min-width: 768px) {
+  body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__cardPhoto .restaurantsCards__cardPhoto--palette {
+    -o-object-position: 50% 67%;
+       object-position: 50% 67%;
+  }
+}
+body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__cardPhoto .restaurantsCards__cardPhoto--note {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  z-index: 1;
+  -o-object-position: 50% 61%;
+     object-position: 50% 61%;
+}
+@media (min-width: 768px) {
+  body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__cardPhoto .restaurantsCards__cardPhoto--note {
+    -o-object-position: 50% 56%;
+       object-position: 50% 56%;
+  }
+}
+body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__cardPhoto .restaurantsCards__cardPhoto--française {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  z-index: 1;
+  -o-object-position: 50% 100%;
+     object-position: 50% 100%;
+}
+@media (min-width: 768px) {
+  body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__cardPhoto .restaurantsCards__cardPhoto--française {
+    -o-object-position: 50% 60%;
+       object-position: 50% 60%;
+  }
+}
+body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__cardPhoto .restaurantsCards__cardPhoto--délice {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  z-index: 1;
+  -o-object-position: 50% 95%;
+     object-position: 50% 95%;
+}
+@media (min-width: 768px) {
+  body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__cardPhoto .restaurantsCards__cardPhoto--délice {
+    -o-object-position: 50% 65%;
+       object-position: 50% 65%;
+  }
+}
+body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__card--content {
+  height: 77px;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "restaurant side" "location side";
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__card--content .restaurantsCards__card--content--restaurant {
+  grid-area: restaurant;
+  font-size: 18px;
+  margin-top: 16px;
+  font-weight: 700;
+  padding-left: 13px;
+  align-self: end;
+}
+body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__card--content .restaurantsCards__card--content--location {
+  grid-area: location;
+  font-size: 17px;
+  font-weight: 300;
+  padding-left: 13px;
+  margin-top: 0px;
+  line-height: 0px;
+  align-self: start;
+}
+body .restaurants .restaurantsCards .restaurantsCards__card .restaurantsCards__card--content .restaurantsCards__card--content--icon {
+  grid-area: side;
+  justify-self: center;
+  align-self: center;
+  font-size: 2.3rem;
+  -webkit-text-stroke: 1.25px #FFFFFF;
+}
+@media (min-width: 768px) {
+  body .restaurants .restaurantsCards .restaurantsCards__card {
+    width: 34.03%;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) {
+  body .restaurants .restaurantsCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5.34%;
+    margin-left: 13%;
+    margin-right: 13%;
+    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */

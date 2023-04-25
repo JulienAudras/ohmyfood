@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Shrikhand&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&family=Shrikhand&display=swap');
+
+*{
+    box-sizing: border-box;
+}
 
 :root{
     font-family: Roboto;
@@ -14,8 +18,7 @@ $footer-color:#353535;
 
 @mixin section-title {
     font-size:2.4rem;
-    font-weight: 900;
-    line-height: 2.813rem;
+    font-weight: 700;
 }
 
 @mixin section-display {
@@ -37,7 +40,7 @@ $footer-color:#353535;
     justify-content: center;
     align-items: center;
     font-size: 1.6rem;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 @mixin card{
@@ -46,6 +49,23 @@ $footer-color:#353535;
     border-radius: 2rem;
     box-sizing: border-box;
 }
+
+@mixin cardPhoto{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+    z-index: 1;
+}
+
+@mixin heartIcon{
+    grid-area: side;
+    justify-self: center;
+    align-self: center;
+    font-size: 2.3rem;
+    -webkit-text-stroke:1.25px $main-background-color
+}
+
 
 body{
     background-color: $main-background-color;
@@ -113,10 +133,15 @@ body{
         .functioning__title{
             @include section-title;
             align-self: flex-start;
-            margin:50px 0 25px 20px;
+            margin:50px 0 25px 28px;
+            @media (min-width: 768px){
+                margin-left:-1%;
+            }
+           
         }
         .functioningCards{
             width: 100%;
+            margin-bottom: 50px;
         
             .functioningCards__card{
                 @include card;
@@ -129,10 +154,11 @@ body{
                 .functioningCards__card--number{
                     background-color:$main-color;
                     width:2.4rem;
+                    min-width: 2.4rem;
                     height: 2.4rem;
                     border-radius: 50px;
                     font-size:1.6rem;
-                    font-weight: bold;
+                    font-weight: 500;
                     color:$main-background-color;
                     display: flex;
                     justify-content: center;
@@ -165,12 +191,133 @@ body{
         @media (min-width: 768px){
             display: flex;
             flex-direction: row;
-            gap:36.51px
+            gap:3.5%
         }  
 
         }
         @media (min-width: 768px){
-            margin:0 10%
+            margin: 0 12%
         }
     }
+    .restaurants{
+        background-color: $secondary-background-color;
+        @include section-display;
+        margin-right: -8px;
+        .restaurants__title{
+            @include section-title;
+            align-self: flex-start;
+            margin:50px 0px 25px 20px;
+            @media (min-width: 768px){
+                margin-left: 12.25%;
+                margin-bottom: 50px;
+            }
+        }
+        .restaurantsCards{
+            width:100%;
+        
+            .restaurantsCards__card{
+                @include section-display;
+                height: 251px;
+                width: 92%;
+                background-color: $main-background-color;
+                border-radius: 15px;
+                margin:0 15px 15px 15px;
+                .restaurantsCards__cardPhoto{
+                    height:69.32% ;
+                    width: 100%;
+                    position: relative;
+                    .new{
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        color:#008766;
+                        padding:7px 9px;
+                        background-color: $tertiary-color;
+                        z-index: 2;
+                        position: absolute;
+                        top:0px;
+                        right: 15px;
+                    
+                    }
+                    .restaurantsCards__cardPhoto--palette{
+                        @include cardPhoto;
+                        object-position: 50% 100%;
+                        @media (min-width: 768px){
+                            object-position: 50% 67%;;
+                        }
+                    }
+                    .restaurantsCards__cardPhoto--note{
+                        @include cardPhoto;
+                        object-position: 50% 61%;
+                        @media (min-width: 768px){
+                            object-position: 50% 56%;
+                        }
+                    }
+                    .restaurantsCards__cardPhoto--française{
+                        @include cardPhoto;
+                        object-position: 50% 100%;
+                        @media (min-width: 768px){
+                            object-position: 50% 60%;
+                        }
+                    }
+                    .restaurantsCards__cardPhoto--délice{
+                        @include cardPhoto;
+                        object-position: 50% 95%;
+                        @media (min-width: 768px){
+                            object-position: 50% 65%;
+                        }
+                    }
+                }
+                    
+                .restaurantsCards__card--content{
+                    height: 77px;
+                    width: 100%;
+                    display:grid;
+                    grid-template-areas:
+                    "restaurant side"
+                    "location side";
+                    grid-template-columns: 3fr 1fr;
+                    grid-template-rows:1fr 1fr;
+                
+                    .restaurantsCards__card--content--restaurant{
+                        grid-area: restaurant;
+                        font-size: 18px;
+                        margin-top: 16px;
+                        font-weight: 700;
+                        padding-left:13px;
+                        align-self:end;
+                    
+                    }                 
+                    .restaurantsCards__card--content--location{
+                        grid-area: location;
+                        font-size: 17px;
+                        font-weight: 300;
+                        padding-left: 13px;
+                        margin-top: 0px;
+                        line-height: 0px;
+                        align-self:start;
+                    }
+                    .restaurantsCards__card--content--icon{
+                        @include heartIcon;
+                    }
+                    
+                }
+            @media (min-width: 768px){
+                width:34.03%;
+                margin-bottom: 50px;
+                
+            }
+            }   
+            @media (min-width: 768px){
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap:5.34%;
+                margin-left:13%;
+                margin-right: 13%;
+                justify-content: center;
+               
+            } 
+
+        }
+        }
 }
