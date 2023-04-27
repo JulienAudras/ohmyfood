@@ -16,6 +16,17 @@ $secondary-background-color:#F7F7F7;
 $tertiary-background-color:#EAEAEA;
 $footer-color:#353535;
 
+@mixin logo{
+    width: 16.2rem;
+    display: block;
+    margin: auto;    
+    margin-top: 14px;
+    margin-bottom: 10px;
+    @media (min-width: 768px) {
+    margin-top: 30px;
+    margin-bottom: 32px;
+    }
+}
 @mixin section-title {
     font-size:2.4rem;
     font-weight: 700;
@@ -29,7 +40,7 @@ $footer-color:#353535;
 }
 
 @mixin button {
-    background: linear-gradient(to top, $main-color, $secondary-color);
+    background: linear-gradient(to top left, $main-color, $secondary-color);
     color: $main-background-color;
     height: 5rem;
     font-size: 1.6rem;
@@ -66,22 +77,19 @@ $footer-color:#353535;
     -webkit-text-stroke:1.25px $main-background-color
 }
 
+@mixin photoMenu{
+    width:100%;
+    height: 275px;
+    object-fit: cover;
+}
+
 
 body{
     background-color: $main-background-color;
     margin:0;
 
     .logo{
-            width: 16.2rem;
-            display: block;
-            margin: auto;    
-            margin-top: 14px;
-            margin-bottom: 5px;
-            
-            @media (min-width: 768px) {
-                margin-top: 30px;
-                margin-bottom: 32px;
-            }
+            @include logo
     }
 
     .location{
@@ -222,6 +230,15 @@ body{
                 background-color: $main-background-color;
                 border-radius: 15px;
                 margin:0 15px 15px 15px;
+                position: relative;
+                .card-link{
+                    position: absolute;
+                    top:0;
+                    bottom: 0;
+                    left:0;
+                    width: 100%;
+                }
+                
                 .restaurantsCards__cardPhoto{
                     height:69.32% ;
                     width: 100%;
@@ -315,9 +332,94 @@ body{
                 margin-left:13%;
                 margin-right: 13%;
                 justify-content: center;
+                padding-bottom: 15px;
                
             } 
 
         }
+    }
+
+    footer{
+        color: $main-background-color;
+        background-color:$footer-color ;
+        .footer__content{
+            padding:10px 25px 22px 30px ;
+            @media(min-width: 768px){
+                display: flex;
+                flex-direction: row;
+                padding-top: 57px;
+                justify-content: flex-end;             
+            }
+            .footer__title{
+                font-family: Shrikhand;
+                font-size: 1.8rem;
+                font-weight: 400;
+                @media(min-width: 768px){
+                    margin-right: 2.77%;
+                    margin-left: 6.94%;
+                    order: 5;
+                } 
+            }
+            .footer__line{
+                display: flex;
+                align-items: center;
+                gap: 11px;
+                font-size:1.6rem;
+                line-height: 0;
+                @media(min-width: 768px){
+                    font-size:1.4rem;
+                }
+                @media(min-width: 802px){
+                    font-size: 1.6rem;
+                }
+
+            }
+            .contact{
+                @media(min-width: 768px){
+                    margin-left: 1.18%;
+                }
+            }
+            .legal{
+                @media(min-width: 768px){
+                    margin-left: 3.47%;
+                }
+            }
+            .apply{
+                @media(min-width: 768px){
+                    margin-left: 1.52%;
+                }
+            }
         }
+    }
+    
+    // Menu pages
+
+    .header__menu{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        justify-content: space-around;
+        margin-left: 23px;
+        //  .header__menu--arrow{
+        //     margin-left:6.13%; 
+        //  }
+        .arrowLink{
+            color: inherit;
+        }
+        .header__menu--logo{
+          @include logo;
+        }
+    }
+
+    .introPhoto{
+        width:100%;
+         .introPhoto__img{
+             @include photoMenu;
+             @media (min-width: 768px){
+                height: 383px;
+                object-position: 50% 58%;
+                }
+         }
+        
+    }
 }
