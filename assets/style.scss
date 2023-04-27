@@ -83,6 +83,62 @@ $footer-color:#353535;
     object-fit: cover;
 }
 
+@mixin courseName{
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding-top: 10px;
+    padding-left: 13px;
+    .borderBottom{
+        padding-bottom: 4px;
+        border-bottom: 3px solid $tertiary-color; 
+        }
+}
+
+@mixin menuButton{
+    background-color: $main-background-color;
+    margin: 12px 13px;
+    border-radius: 15px;
+    padding: 12px 15px; 
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+}
+
+@mixin menuItem{
+    .menu__item{
+        @include menuButton
+    }
+        .menu__item--title{
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .menu__item--details{
+            display: flex;
+            justify-content: space-between;
+            .menu__item--details--txt{
+                font-size: 1.5rem;
+                font-weight: 300;
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
+            .menu__item--details--price{
+                font-size: 1.5rem;
+                font-weight: 700;
+                margin-top: 5px;
+                margin-bottom: 0;
+            }
+        }
+}
+
+@mixin menuDisplay{
+    .menu__item--first{
+        @include menuButton;
+        margin-top: 20px;
+    }
+    @include menuItem;
+    padding-bottom: 20px;
+}
+
 
 body{
     background-color: $main-background-color;
@@ -422,4 +478,77 @@ body{
          }
         
     }
-}
+
+    
+    .menu__titre{
+        background-color: $secondary-background-color;
+        margin-top: -58px;
+        position: relative;
+        border-radius: 40px 40px 0 0 ;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        padding-left: 17px;
+        padding-right: 41px;
+        gap:20px;
+            .menu__titre--title{
+                font-family: Shrikhand;
+                font-size: 2.8rem;
+                font-style: italic;
+                font-weight: 400;
+            }
+            .menu__titre--icon{
+                font-size: 22px;
+                -webkit-text-stroke:1.25px $secondary-background-color
+            }
+                
+        }
+        
+        .starters{
+            background-color: $secondary-background-color;
+            margin-top: -17px;
+            .starters__title{
+                @include courseName
+            }
+            @include menuDisplay
+        }
+
+        .mainCourses{
+            background-color: $secondary-background-color;
+            margin-top: -14px;
+            .mainCourses__title{
+                @include courseName
+            }
+            @include menuDisplay
+        }
+
+        .desserts{
+            background-color: $secondary-background-color;
+            margin-top: -14px;
+            .desserts__title{
+                @include courseName
+            }
+            @include menuDisplay
+        }
+
+        .btnOrder{
+            background-color: $secondary-background-color;
+            margin-top: -16px;
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            .btnOrder__btn{
+                @include button;
+                width: 18.6rem;
+                
+            }
+        }
+
+            
+        }
+
+    
+    
+    
+
