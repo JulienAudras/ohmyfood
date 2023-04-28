@@ -456,6 +456,15 @@ body .menu__titre .menu__titre--icon {
   font-size: 22px;
   -webkit-text-stroke: 1.25px #F7F7F7;
 }
+@media (min-width: 768px) {
+  body .menu__titre {
+    width: 73.26%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    gap: 24px;
+  }
+}
 body .starters {
   background-color: #F7F7F7;
   margin-top: -17px;
@@ -507,6 +516,15 @@ body .starters .menu__item--details .menu__item--details--price {
   font-weight: 700;
   margin-top: 5px;
   margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  body .starters {
+    width: 73.26%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14.58%;
+    padding-right: 14.58%;
+  }
 }
 body .mainCourses {
   background-color: #F7F7F7;
@@ -560,6 +578,15 @@ body .mainCourses .menu__item--details .menu__item--details--price {
   margin-top: 5px;
   margin-bottom: 0;
 }
+@media (min-width: 768px) {
+  body .mainCourses {
+    width: 73.26%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14.58%;
+    padding-right: 14.58%;
+  }
+}
 body .desserts {
   background-color: #F7F7F7;
   margin-top: -14px;
@@ -612,6 +639,15 @@ body .desserts .menu__item--details .menu__item--details--price {
   margin-top: 5px;
   margin-bottom: 0;
 }
+@media (min-width: 768px) {
+  body .desserts {
+    width: 73.26%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14.58%;
+    padding-right: 14.58%;
+  }
+}
 body .btnOrder {
   background-color: #F7F7F7;
   margin-top: -16px;
@@ -634,4 +670,13 @@ body .btnOrder .btnOrder__btn {
   font-size: 1.6rem;
   font-weight: 500;
   width: 18.6rem;
+}
+@media (min-width: 768px) {
+  body .btnOrder {
+    width: 73.26%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 14.58%;
+    padding-right: 14.58%;
+  }
 }/*# sourceMappingURL=style.css.map */

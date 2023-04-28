@@ -139,6 +139,25 @@ $footer-color:#353535;
     padding-bottom: 20px;
 }
 
+@mixin responsiveMenuTitle{
+    @media (min-width: 768px){
+        width:73.26%;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        gap: 24px;        
+    }
+}
+
+@mixin reponsiveMenuSection{
+    @media (min-width: 768px){
+        width:73.26%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 14.58%;
+        padding-right: 14.58%;
+        }
+}
 
 body{
     background-color: $main-background-color;
@@ -500,35 +519,38 @@ body{
             .menu__titre--icon{
                 font-size: 22px;
                 -webkit-text-stroke:1.25px $secondary-background-color
-            }
-                
+            }  
+        @include responsiveMenuTitle;             
         }
         
         .starters{
             background-color: $secondary-background-color;
             margin-top: -17px;
             .starters__title{
-                @include courseName
+                @include courseName;
             }
-            @include menuDisplay
+            @include menuDisplay;
+            @include reponsiveMenuSection;
         }
 
         .mainCourses{
             background-color: $secondary-background-color;
             margin-top: -14px;
             .mainCourses__title{
-                @include courseName
+                @include courseName;
             }
-            @include menuDisplay
+            @include menuDisplay;
+            @include reponsiveMenuSection;
         }
 
         .desserts{
             background-color: $secondary-background-color;
             margin-top: -14px;
             .desserts__title{
-                @include courseName
+                @include courseName;
             }
-            @include menuDisplay
+            @include menuDisplay;
+            @include reponsiveMenuSection;
         }
 
         .btnOrder{
@@ -540,9 +562,9 @@ body{
             padding-bottom: 30px;
             .btnOrder__btn{
                 @include button;
-                width: 18.6rem;
-                
+                width: 18.6rem;           
             }
+            @include reponsiveMenuSection;
         }
 
             
@@ -551,4 +573,3 @@ body{
     
     
     
-
